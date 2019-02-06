@@ -93,7 +93,6 @@ header{
 .container button.navbar-toggler{
     border: hidden;
 }
-
 @media screen and (min-width: 768px){
     .navbar > .container{
         align-items: flex-start;
@@ -177,6 +176,79 @@ header{
     opacity: .8;
 }
 
+.category-tile{
+    height: 200px;
+    width: 200px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #3f0c1f;
+}
+.category-tile span{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    background-color: #000;
+    color: white;
+    opacity: .8;
+}
+.category-tile:hover{
+    box-shadow: 0 1px 5px 1px #cccccc;
+}
+#menu-categories-title + div{
+    margin-bottom: 50px;
+}
+
+.menu-item-tile hr{
+    width: 80%;
+    background-color: white;
+}
+.menu-item-tile{
+    margin-bottom: 25px;
+}
+.menu-item-tile .menu-item-price{
+    font-size: 1.1em;
+    text-align: right;
+    margin-top: -15px;
+    margin-right: -15px;
+}
+.menu-item-tile .menu-item-price span{
+    font-size: .6em;
+}
+.menu-item-photo{
+    position: relative;
+    overflow: hidden;
+    margin-right: -15px;
+    margin-left: auto;
+    margin-bottom: 20px;
+    padding: 0;
+    max-width: 250px;
+    border: 2px solid #3f0c1f;
+}
+
+.menu-item-photo div{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    background-color: #557c3e;
+    text-align: center;
+}
+.menu-item-description{
+    padding-right: 30px;
+}
+h3.menu-item-title{
+    margin: 0 0 10px;
+}
+.menu-item-details{
+    font-size: .9em;
+    font-style: italic;
+}
+
 @media screen and (min-width: 1200px){
     .container .jumbotron{
         background: url("../images/jumbotron_1200.jpg") no-repeat;
@@ -239,9 +311,9 @@ header{
     .navbar-brand p img{
         height: 20px;
     }
-    .navbar > .container{
+    /*.navbar > .container{
         flex-wrap: nowrap;
-    }
+    }*/
 
     #navbar-list a span{
         font-size: 1.1em;
@@ -287,6 +359,16 @@ header{
         max-width: 360px;
         margin: 0 auto 15px;
     }
+
+    .menu-item-photo{
+        margin-right: auto;
+    }
+    .menu-item-tile .menu-item-price{
+        text-align: center;
+    }
+    .menu-item-description{
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 479px){
@@ -300,7 +382,7 @@ header{
     .container button.navbar-toggler{
         position: absolute;
         right: 0;
-        bottom: 0;
+        top: 40px;
         font-size: 1.2rem;
     }
 }
