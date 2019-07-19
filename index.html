@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>David Chu's China Bistro</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <nav id="header-nav" class="navbar navbar-expand-md navbar-light">
+            <div class="container" id="flex-start">
+                <div class="navbar-header">
+                    <a href="index.html" class="float-left d-none d-lg-block">
+                        <div id="logo-img" alt="Logo image"></div>
+                    </a>
+
+                    <div class="navbar-brand">
+                        <a href="index.html"><h1>David Chu's China Bistro</h1></a>
+                        <p>
+                            <img src="images/star-k-logo.png" alt="Kosher Certification">
+                            <span>Kosher Certified</span>
+                        </p>
+                    </div>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto" id="navbar-list">
+                        <li class="nav-item">
+                            <a class="nav-link" href="menu-categories.html">
+                                <span><i class="fas fa-utensils"></i></span><br class="d-none d-md-block">Menu
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span><i class="fas fa-info-circle"></i></span><br class="d-none d-md-block">About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span><i class="fas fa-certificate"></i></span><br class="d-none d-md-block">Awards
+                            </a>
+                        </li>
+                        <li class="nav-item d-none d-md-block d-lg-none">
+                            <a class="nav-link" id="delivery" href="tel:+380666763104">
+                                <span><i class="fas fa-phone"></i></span>Delivery
+                            </a>
+                        </li>
+                        <li class="nav-item d-none d-lg-block" id="phone">
+                            <a class="nav-link" href="tel:+380666763104">
+                                <span>+380666763104</span></a><div>We deliver</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="call-btn" class="d-block d-md-none d-lg-none d-xl-none">
+        <a class="btn" href="tel:+380666763104">
+            <span><i class="fas fa-phone"></i></span>+380666763104
+        </a>
+    </div>
+    <div id="sm-deliver" class="text-center d-block d-md-none d-lg-none d-xl-none">We deliver</div>
+
+    <div class="container" id="main-content">
+        <div class="jumbotron">
+            <img src="images/jumbotron_768.jpg" alt="Picture of restaurant" class="img-fluid d-block d-md-none d-lg-none d-xl-none">
+        </div>
+
+        <div class="row" id="home-tiles">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a href="menu-categories.html"><div id="menu-tile"><span>menu</span></div></a>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a href="single-category.html"><div id="specials-tile"><span>specials</span></div></a>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+                <a href="https://goo.gl/maps/cF8HzKxyq932" target="_blank">
+                    <div id="map-tile">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10170.993562778278!2d30.615536122167946!3d50.40852656517038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4270050b2e556548!2sCarpaccio+restaurant!5e0!3m2!1sru!2sua!4v1549202575527" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen>
+                        </iframe>
+                        <span>map</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="card-footer">
+        <div class="container">
+            <div class="row">
+                <section id="hours" class="col-md-4">
+                    <span>Hours:</span><br>
+                    Sun-Thurs: 11:15am - 10:00pm<br>
+                    Fri: 11:15am - 2:30pm<br>
+                    Saturday Closed
+                    <hr class="d-block d-md-none">
+                </section>
+                <section id="address" class="col-md-4">
+                    <span>Address:</span><br>
+                    7105 Reisterstown Road<br>
+                    Baltimore, MD 21215
+                    <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
+                    <hr class="d-block d-md-none">
+                </section>
+                <section id="testimonials" class="col-md-4">
+                    <p>"The best Chinese restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
+                    <p>"Amazing food! Great service! Couldn't ask for more! I'll be back again and again!"</p>
+                </section>
+            </div>
+            <div class="text-center">&copy; Copyright David Chu's China Bistro 2016</div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
