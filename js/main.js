@@ -34,6 +34,17 @@ $(function (){
       return string;
     };
 
+    var switchActiveState = function (id) {
+      var classes = document.querySelector("#navHomeButton").className;
+      classes = classes.replace(new RegExp(" active","g"), "");
+      document.querySelector("#navHomeButton").className = classes;
+
+      classes = document.querySelector(id).className;
+      if (classes.indexOf("active") === -1){
+          document.querySelector(id).className += " active";
+      }
+    };
+
     document.addEventListener("DOMContentLoaded", function (event) {
         showLoading("#main-content");
         $ajaxUtils.sendGetRequest(homeHtml, function (responseText) {
@@ -42,31 +53,33 @@ $(function (){
     });
 
     dc.loadMenuCategories = function () {
+        switchActiveState("#navMenuButton");
         showLoading("#main-content");
         $ajaxUtils.sendGetRequest(allCategoriesUrl, buildAndShowCategoriesHtml);
     };
 
     dc.loadSingleCategory = function (categoryShort) {
+        switchActiveState("#navMenuButton");
         showLoading("#main-content");
         $ajaxUtils.sendGetRequest(allMenuItemsUrl + categoryShort + ".json", buildAndShowMenuItemsHtml);
     };
 
-    function buildAndShowCategoriesHtml (category) {
+    function buildAndShowCategoriesHtml (categories) {
         $ajaxUtils.sendGetRequest(categoryTitleHtml, function (categoryTitleHtml) {
             $ajaxUtils.sendGetRequest(categoryHtml, function (categoryHtml) {
-                var categoryViewHtml = buildCategoryViewHtml(category, categoryTitleHtml, categoryHtml);
+                var categoryViewHtml = buildCategoryViewHtml(categories, categoryTitleHtml, categoryHtml);
                 insertHtml("#main-content", categoryViewHtml);
             }, false);
         }, false);
     }
 
-    function buildCategoryViewHtml (category, categoryTitleHtml, categoryHtml) {
+    function buildCategoryViewHtml (categories, categoryTitleHtml, categoryHtml) {
         var finalHtml = categoryTitleHtml;
         finalHtml += "<section class='row'>";
-        for (var i = 0; i < category.length; i++){
+        for (var i = 0; i < categories.length; i++){
             var html = categoryHtml;
-            var name = "" + category[i].name;
-            var short_name = category[i].short_name;
+            var name = categories[i].name;
+            var short_name = categories[i].short_name;
             html = insertProperty(html, "name", name);
             html = insertProperty(html, "short_name", short_name);
             finalHtml += html;
@@ -106,7 +119,7 @@ $(function (){
             html = insertProperty(html,"description", menuItems[i].description);
             if (i % 2 !== 0) {
                 html +=
-                    "<div class='clearfix visible-lg-block visible-md-block'></div>";
+                    "<div class='clearfix d-md-block'></div>";
             }
             finalHtml += html;
         }

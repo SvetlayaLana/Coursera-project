@@ -104,6 +104,10 @@ header{
     background-color: #ffb918;
 }
 
+#navbar-list > li.active > a{
+    color: #557c3e;
+}
+
 .card-footer{
     margin-top: 30px;
     padding-top: 35px;
